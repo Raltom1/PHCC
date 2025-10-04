@@ -1,0 +1,583 @@
+/* Reset basic margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif, bold;
+  background-color: #f9fcff; /* Very light blue/white background */
+  color: #2c3e50; /* Dark gray/navy text */
+  line-height: 1.6;
+}
+
+/* Full height layout for sticky footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content will expand and push footer down */
+main {
+  flex: 1;
+}
+
+
+/* Header */
+header {
+  background-color: #a8d8f0; /* Soft baby blue */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* Logo+Title sa left, Nav sa right */
+  align-items: center;
+  flex-wrap: wrap; /* para responsive pag maliit ang screen */
+  border-bottom: 10px solid #73aae9; /* Dark blue line */
+}
+
+
+/* Logo + Title wrapper */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo styling */
+.logo {
+  width: 80px;  /* adjust size ng logo */
+  height: auto;
+}
+
+/* Header title */
+header h1 {
+  font-size: 1.5rem;
+  color: #1b3b5f;
+  margin: 0;
+}
+
+/* Nav menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1b3b5f;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0077b6; /* darker blue on hover */
+}
+/* Special style for Login button sa nav */
+.login-btn {
+  background-color: #b1f8b1; /* Mint green */
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: #1b3b5f;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #fff2c5; /* Sunshine yellow */
+  color: #000;
+}
+/*sa services*/
+.services a {
+  text-decoration: none; /* alisin underline */
+  color: inherit;        /* sundin kulay ng text sa loob */
+  display: block;        /* para behave like box */
+}
+
+.service-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* ====== Logout Button Special Style ====== */
+nav a.login-btn {
+  background: #f44336;   /* red background */
+  color: white;          /* text white */
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+nav a.login-btn:hover {
+  background: #c62828;   /* darker red hover */
+  color: #fff;
+}
+
+
+/* Responsive: stack nav under logo when screen is small */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-title {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1b3b5f;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #81764c; /* darker blue on hover */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px;
+  color: #1b3b5f;
+  z-index: 1;
+  overflow: hidden;
+  font-style: bold;
+}
+
+/* Background Image with Blur */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url("https://digitalmedic.stanford.edu/sites/g/files/sbiybj28996/files/styles/breakpoint_2xl_2x/public/media/image/banner_images_dm_website_7_0.png?itok=pVjxEmHB") no-repeat center center/cover;
+  filter: blur(5px) brightness(0.8); /* blur + adjust brightness */
+  transform: scale(1.1); /* para walang putol */
+  z-index: -1;
+}
+
+
+/* Content Section */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.content h2 {
+  margin-bottom: 15px;
+  color: #1b3b5f;
+}
+
+/* Services grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-box {
+  background: #ffffff;
+  border: 2px solid #a8d8f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box h3 {
+  color: #1b3b5f;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+/* Hover effect */
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+/*BUTTON SA HERO SECTION*/
+.cta {
+  background-color: #98ff98; /* Mint green */
+  border: none;
+  padding: 9px 25px;
+  border-radius: 9px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #ffdb58; /* Sunshine yellow */
+}
+
+/* Contact Section */
+.contact {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid #a8d8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+  color: #1b3b5f;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #a8d8f0; /* Soft baby blue */
+  text-align: center;
+  padding: 35px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #1b3b5f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+/*generalCHECKup*/
+
+.general-checkup {
+  padding: 40px;
+  background: #f9fbfd;
+  border-top: 5px solid #73aae9;
+  line-height: 1.6;
+}
+
+.general-checkup h2 {
+  text-align: center;
+  color: #1b3b5f;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.general-checkup h3 {
+  margin-top: 30px;
+  color: #3179c6;
+}
+
+.general-checkup p {
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.general-checkup ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.general-checkup li {
+  margin-bottom: 10px;
+}
+
+.checkup-intro, 
+.checkup-details, 
+.checkup-why, 
+.checkup-approach {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.checkup-intro img,
+.checkup-details img,
+.checkup-why img,
+.checkup-approach img {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.benefits {
+  background: #e6f4fa;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.closing {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.vaccinations {
+  padding: 40px;
+  background: #fefcf7;
+  border-top: 5px solid #6ac47e;
+  line-height: 1.6;
+}
+
+.vaccinations h2 {
+  text-align: center;
+  color: #145a32;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.vaccinations h3 {
+  margin-top: 30px;
+  color: #28a745;
+}
+
+.vaccinations p {
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.vaccinations ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.vaccinations li {
+  margin-bottom: 10px;
+}
+
+.vax-intro, 
+.vax-importance, 
+.vax-benefits, 
+.vax-approach {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.vax-intro img,
+.vax-importance img,
+.vax-benefits img,
+.vax-approach img {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.vax-list {
+  background: #e8f9f0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.closing {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/*newborn care*/
+.newbornCare {
+  padding: 40px;
+  background: #fdfcfb;
+  border-top: 5px solid #ffb347;
+  line-height: 1.6;
+}
+
+.newbornCare h2 {
+  text-align: center;
+  color: #b85c38;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.newbornCare h3 {
+  margin-top: 30px;
+  color: #e67e22;
+}
+
+.care-img {
+  width: 180px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.newborn-benefits {
+  background: #fff7e6;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.newborn-benefits li {
+  margin-bottom: 12px;
+}
+
+.newbornCare .closing {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/*Nutrition counseling*/
+.NutritionCounseling {
+  padding: 40px;
+  background: #f8fcf6;
+  border-top: 5px solid #7ac74f;
+  line-height: 1.6;
+}
+
+.NutritionCounseling h2 {
+  text-align: center;
+  color: #2d572c;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.NutritionCounseling h3 {
+  margin-top: 30px;
+  color: #4CAF50;
+}
+
+.nutrition-img {
+  width: 180px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.nutrition-list {
+  background: #e9f7ef;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nutrition-list li {
+  margin-bottom: 12px;
+}
+
+.NutritionCounseling .closing {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+}
+/*PHCC*/
+.PHCC {
+  padding: 60px 20px;
+  background: #fdf6f6; /* soft background color */
+  color: #333;
+  text-align: center;
+}
+
+.phcc-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.PHCC h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #b30000; /* deep red for medical theme */
+}
+
+.PHCC p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.PHCC h3 {
+  font-size: 1.5rem;
+  margin: 25px 0 15px;
+  color: #444;
+}
+
+.PHCC ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.PHCC ul li {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  text-align: left;
+  padding-left: 25px;
+  position: relative;
+}
+
+.PHCC ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff4d4d;
+}
