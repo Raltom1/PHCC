@@ -35,6 +35,6 @@
 
 ## 📂 How to Run
 ```bash
-git clone https://github.com/Raltom1/pff.git
+git clone https://github.com/Raltom1/PHCC.git
 cd "WEB(PHC)Pediatric Health Care Center"
 open LOGIN.html
