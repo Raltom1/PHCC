@@ -31,10 +31,17 @@
 
 ---
 
+## 📸 Preview
+![Screenshot_20251006-065150_Chrome](https://github.com/user-attachments/assets/e62be864-f397-4092-bb26-08fa23cc612a)
+)
 
+ ![Screenshot_20251006-064943_Chrome](https://github.com/user-attachments/assets/72581896-e326-481e-b933-6af19471f4ac)
+
+
+---
 
 ## 📂 How to Run
 ```bash
-git clone https://github.com/Raltom1/PHCC.git
+git clone https://github.com/Raltom1/pff.git
 cd "WEB(PHC)Pediatric Health Care Center"
 open LOGIN.html
